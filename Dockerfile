@@ -21,5 +21,6 @@ COPY conf/apache2-ports.conf /etc/apache2/ports.conf
 COPY conf/apache2-site.conf /etc/apache2/sites-available/000-default.conf
 COPY conf/apache2-index.html /var/www/html/apache2/index.html
 
+EXPOSE 80 8080
 
 CMD ["supervisord", "-c", "/etc/supervisor/supervisord.conf"]
